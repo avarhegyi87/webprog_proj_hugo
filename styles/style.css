@@ -14,7 +14,7 @@ html {
 
 #nav {
     background: white;
-    padding: 25px 0;
+    padding: 10px 0;
     margin: 0 0 25px;
     text-align: center;
     text-decoration: none;
@@ -23,7 +23,12 @@ html {
     border-bottom: 3px solid #eee;
 }
 
-nav ul  {
+.custom-toggler.navbar-toggler {
+    border-color: #2e7ad9;
+} 
+
+navbar-nav {
+    display: inline-block;
     list-style-type: none;
 }
 

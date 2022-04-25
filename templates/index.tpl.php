@@ -22,15 +22,15 @@
         <?php if (isset($wnd_title['motto'])) { ?><h2 id="page-subtitle"><?= $wnd_title['motto'] ?></h2><?php } ?>
     </header>
     <div id="wrapper">
-        <nav id="nav" class="navbar navbar-expand-sm bg-light navbar-dark">
+        <nav id="nav" class="navbar navbar-expand-sm bg-light navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul>
+                <ul class="navbar-nav">
                     <?php foreach ($pages as $url => $page) { ?>
-                        <li <?= ($page == $search) ? ' class="active"' : ''; ?>>
-                            <a href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+                        <li class="nav-item" <?= ($page == $search) ? ' class="active"' : ''; ?>>
+                            <a class="nav-link" href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
                                 <?php echo $page['text'] ?>
                             </a>
                         </li>

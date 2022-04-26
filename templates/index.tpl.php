@@ -16,14 +16,11 @@
 <body>
     <div id="page">
         <header>
-            <a href="?page=home" rel="home">
-                <img src="./imgsources/<?php $header['img-source'] ?>" alt="<?php $header['img-alt'] ?>">
-            </a>
             <h1 id="page-title"><?= $wnd_title['title'] ?></h1>
             <?php if (isset($wnd_title['motto'])) { ?><h2 id="page-subtitle"><?= $wnd_title['motto'] ?></h2><?php } ?>
         </header>
         <div id="wrapper">
-            <nav id="nav" class="navbar navbar-expand-sm bg-light navbar-light justify-content-center">
+            <nav id="nav" class="navbar navbar-expand-lg bg-light navbar-light justify-content-center">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -42,6 +39,7 @@
                     </ul>
                 </div>
             </nav>
+            <img id="header-pic" src="./imgsources/<?= $headerpic['img-source'] ?>" alt="<?= $headerpic['img-alt'] ?>" width="937" height="300">
             <div id="container">
                 <?php include("./templates/pages/{$search['file']}.tpl.php"); ?>
             </div>

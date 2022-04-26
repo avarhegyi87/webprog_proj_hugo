@@ -11,7 +11,7 @@ body {
 #page-title {
     text-align: center;
     color: #2e7ad9;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: large;
 }
 
@@ -24,7 +24,7 @@ body {
 
 #nav {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: smaller;
+    font-size: small;
     background: white;
     padding: 10px 0;
     margin: 15px 0 25px;
@@ -71,6 +71,22 @@ nav a:hover {
 
 .active {
     color: #2e7ad9 !important;
+}
+
+img {
+    max-width: 60%;
+    height: auto;
+}
+
+#header-pic {
+    display: block;
+    margin: 0 auto 27px;
+    border-radius: 5px;
+}
+
+#news {
+    height: 100vh;
+    overflow-y: auto;
 }
 
 footer {

@@ -4,7 +4,7 @@
         'motto'=>'A non-official practice site for the Hugo Awards'
     );
 
-    $header = array(
+    $headerpic = array(
 		'img-source'=>'HugoHeader.jpg',
 		'img-alt'=>'logo'
 	);
@@ -28,7 +28,8 @@
         'submissions'=>array('file'=>'submissions', 'text'=>'Submissions'),
         'hugos'=>array('file'=>'hugos', 'text'=>'Current/Past Hugos'),
         'contactform'=>array('file'=>'contactform', 'text'=>'Contact Us'),
-        'yourmsg'=>array('file'=>'yourmsg', 'text'=>'Your Message To Us')
+        'yourmsg'=>array('file'=>'yourmsg', 'text'=>'Your Message'),
+        'gallery'=>array('file'=>'gallery', 'text'=>'Gallery')
 	);
 
 	$error_page = array('file'=>'404','text'=>'A keresett oldal nem található');

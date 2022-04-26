@@ -1,5 +1,5 @@
 <header>
-    <h1 class="entry-title">2022 Hugo Award Finalists Announced</h1>
+    <h1 class="entry-title">Contact Us</h1>
 </header>
 <form name="contact-form" action="?page=yourmsg" onsubmit="return sendContact();" method="POST">
     <div>

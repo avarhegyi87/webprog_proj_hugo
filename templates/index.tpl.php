@@ -33,8 +33,8 @@
                                 </a>
                             </li>
                         <?php } ?>
-                        <button class="btn btn-danger navbar-btn" onclick="window.open('<?= $footer['original'] ?>')" target="_blank">
-                            Go to the original site
+                        <button class="btn btn-primary navbar-btn" onclick="window.open('<?= $footer['original'] ?>')" target="_blank">
+                            The original site
                         </button>
                     </ul>
                 </div>

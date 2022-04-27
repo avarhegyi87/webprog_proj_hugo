@@ -12,18 +12,24 @@ class User {
 }
 
 function sendContact() {
-    fields.gender = getGender();
+    try {
+        fields.gender = getGender();
 
-    if (isValid()) {
-        let usr = new User(firstName.value, lastName.value, fields.gender.value,
-            email.value, newsletter.checked);
+        if (isValid()) {
+            let usr = new User(firstName.value, lastName.value, fields.gender.value,
+                email.value, newsletter.checked);
 
-        alert(`${usr.firstName} thanks for contacting us.`)
-        return true;
-    } else {
-        alert("Error in the form.")
+            alert(`${usr.firstName} thanks for contacting us.`);
+            return true;
+        } else {
+            alert("Missing mandatory data on the form.");
+            return false;
+        }
+    } catch (err) {
+        alert(err);
         return false;
     }
+
 }
 
 function getGender() {
@@ -45,7 +51,13 @@ function fieldValidation(field, validationFunction) {
 
     let isFieldValid = validationFunction(field.value)
     if (!isFieldValid) {
-        field.className = 'placeholderRed';
+        if (field == fields.gender) {
+            field[0].focus();
+        } else {
+            field.className = 'placeholderRed';
+            field.focus();
+        }
+
     } else {
         field.className = '';
     }
@@ -56,11 +68,11 @@ function fieldValidation(field, validationFunction) {
 function isValid() {
     var valid = true;
 
-    valid &= fieldValidation(fields.firstName, isNotEmpty);
-    valid &= fieldValidation(fields.lastName, isNotEmpty);
-    valid &= fieldValidation(fields.gender, isNotEmpty);
-    valid &= fieldValidation(fields.email, isEmail);
     valid &= fieldValidation(fields.question, isNotEmpty);
+    valid &= fieldValidation(fields.email, isEmail);
+    valid &= fieldValidation(fields.gender, isNotEmpty);
+    valid &= fieldValidation(fields.lastName, isNotEmpty);
+    valid &= fieldValidation(fields.firstName, isNotEmpty);
 
     return valid;
 }

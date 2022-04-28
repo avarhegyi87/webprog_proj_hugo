@@ -175,8 +175,11 @@ form button[type=submit]:hover {
 }
 
 #msg-display {
-    width: 70%;
-    margin: auto;
+    width: 100%;
+}
+
+#msg-display td {
+    padding-left: 15px;
 }
 
 div.gallery {

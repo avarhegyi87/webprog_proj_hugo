@@ -40,7 +40,7 @@ body {
 
 .custom-toggler.navbar-toggler {
     border-color: #2e7ad9;
-} 
+}
 
 navbar-nav {
     display: inline-block;
@@ -89,8 +89,8 @@ img {
     border-radius: 5px;
 }
 
-.article {
-    margin-bottom: 54px;
+article {
+    padding-bottom: 54px;
 }
 
 #entry-title {
@@ -106,6 +106,58 @@ img {
     overflow-y: auto;
 }
 
+th,
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: lightblue;
+    transition: .4s;
+}
+
+#form-title {
+    text-align: center;
+}
+
+form {
+    padding: 80px;
+}
+
+form input[type=text],
+form input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    width: 100%;
+    padding: 12px, 20px;
+    margin: 8px, 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button[type=submit] {
+    width: 100%;
+    background-color: #2e7ad9 !important;
+    color: white !important;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button[type=submit]:hover {
+    background-color: #1d5692 !important;
+}
+
 .placeholderRed {
     background-color: lightsalmon;
 }
@@ -116,11 +168,74 @@ img {
     font-style: italic;
 }
 
+.asteriks {
+    color: crimson;
+}
+
+#error-note {
+    text-align: center;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#msg-display {
+    width: 70%;
+    margin: auto;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+}
+
+div.pic-info {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 footer {
     font-size: small;
     border-style: solid;
     border-width: 1px 0;
-    border-color: gray;
+    border-color: #ddd;
     color: gray;
     margin-top: 54px;
     padding: 10px 0px;

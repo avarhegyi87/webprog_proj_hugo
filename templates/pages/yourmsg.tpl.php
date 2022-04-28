@@ -4,7 +4,7 @@ if (
     isset($_POST['gender']) && isset($_POST['email']) && isset($_POST['question'])
 ) {
 ?>
-    <div class="msg-display">
+    <div id="msg-display">
         <table>
             <tbody>
                 <tr>
@@ -38,7 +38,7 @@ if (
                 </tr>
                 <tr>
                     <th>Signed up to newsletter?</th>
-                    <td><?= ($_POST['newsletter'] == 'on') ? 'Yes' : 'No'; ?></td>
+                    <td><?= (isset($_POST['newsletter'])) ? 'Yes' : 'No'; ?></td>
                 </tr>
                 <tr>
                     <th>Your message to us</th>
@@ -49,7 +49,7 @@ if (
     </div>
 <?php
 } else { ?>
-    <p class="error-note">
+    <p id="error-note">
         There is no message to display.
         <br>
         You can send us a message <a href="?page=contactform">HERE</a>.

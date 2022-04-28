@@ -7,9 +7,9 @@ $pics = array();
 $pics = array();
 $picreader = opendir($PICFOLDER);
 while (($file = readdir($picreader)) !== false) {
-    if (is_file($PICFOLDER.$file)) {
+    if (is_file($PICFOLDER . $file)) {
         if (in_array(pathinfo($file, PATHINFO_EXTENSION), $FORMATS)) {
-            $pics[$file] = filemtime($PICFOLDER.$file);
+            $pics[$file] = filemtime($PICFOLDER . $file);
         }
     }
 }
@@ -52,21 +52,24 @@ if (!empty($msg)) {
 <h2>Upload images to the Gallery</h2>
 <form action="?page=gallery" method="post" enctype="multipart/form-data">
     <label>Select Images: <input type="file" name="images[]" multiple required></label>
+    <br>
     <input type="submit" name="imgsend" value="Upload">
 </form>
 
-<div class="entry-content">
+<div>
     <h2>Uploaded Pictures</h2>
     <?php
     arsort($pics);
 
     foreach ($pics as $file => $imgdate) { ?>
-        <div class="image">
-            <a href="<?php echo $PICFOLDER . $file ?>">
-                <img src="<?php echo $PICFOLDER . $file ?>">
-            </a>
-            <p class="pic-info">File name: <?php echo $file ?></p>
-            <p class="pic-info">Date: <?php echo date($DATEFORMAT, $imgdate) ?></p>
+        <div class="responsive">
+            <div class="gallery">
+                <a href="<?php echo $PICFOLDER . $file ?>">
+                    <img src="<?php echo $PICFOLDER . $file ?>" height="600">
+                </a>
+                <div class="pic-info">File name: <?php echo $file ?> - Date: <?php echo date($DATEFORMAT, $imgdate) ?></div>
+            </div>
         </div>
     <?php } ?>
+    <div class="clearfix"></div>
 </div>

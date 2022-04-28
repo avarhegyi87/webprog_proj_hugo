@@ -3,7 +3,7 @@
         <h1 class="entry-title">Hugo Awards for Best Novel by Year</h1>
     </header>
     <div class="entry-content">
-        <table>
+        <table class="awards">
             <tbody>
                 <tr>
                     <th width="7%" scope="col">Year</th>
@@ -68,7 +68,7 @@
                     <th scope="rowgroup" align="center" rowspan="2">2015</th>
                     <td>Cixin Liu (Chinese)</td>
                     <td rowspan="2"><i>The Three-Body Problem</i></td>
-                    <td>Chongqing Press (original)<br />Tor Books (translation)</td>
+                    <td rowspan="2">Chongqing Press (original)<br />Tor Books (translation)</td>
                 </tr>
                 <tr>
                     <td>Ken Liu (translator)</td>
@@ -119,7 +119,7 @@
         <h1 class="entry-title">Candidates for Hugo Awards for Best Novel in 2022</h1>
     </header>
     <div class="entry-content">
-        <table>
+        <table class="awards">
             <tbody>
                 <tr>
                     <th width="7%" scope="col">Year</th>
@@ -131,32 +131,32 @@
                     <th scope="rowgroup" align="center" rowspan="6">2022</th>
                     <td>Arkady Martine</td>
                     <td><i>A Desolation Called Peace</i></td>
-                    <td><i>Tor Books</i></td>
+                    <td>Tor Books</td>
                 </tr>
                 <tr>
                     <td>Becky Chambers</td>
                     <td><i>The Galaxy, and the Ground Within</i></td>
-                    <td><i>Harper Voyager/Hodder & Stoughton</i></td>
+                    <td>Harper Voyager/Hodder & Stoughton</td>
                 </tr>
                 <tr>
                     <td>Ryka Aoki</td>
                     <td><i>Light From Uncommon Stars</i></td>
-                    <td><i>Tor Books/St Martin's Press</i></td>
+                    <td>Tor Books/St Martin's Press</td>
                 </tr>
                 <tr>
                     <td>P. Djèlí Clark</td>
                     <td><i>A Master of Djinn</i></td>
-                    <td><i>Tor.com Publishing/Orbit UK</i></td>
+                    <td>Tor.com Publishing/Orbit UK</td>
                 </tr>
                 <tr>
                     <td>Andy Weir</td>
                     <td><i>Project Hail Mary</i></td>
-                    <td><i>Ballantine Books/Del Rey Books</i></td>
+                    <td>Ballantine Books/Del Rey Books</td>
                 </tr>
                 <tr>
                     <td>Shelley Parker-Chan</td>
                     <td><i>She Who Became the Sun</i></td>
-                    <td><i>Tor Books/Mantle Books</i></td>
+                    <td>Tor Books/Mantle Books</td>
                 </tr>
             </tbody>
         </table>

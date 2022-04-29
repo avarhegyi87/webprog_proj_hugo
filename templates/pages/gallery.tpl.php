@@ -2,8 +2,7 @@
     <h1 class="entry-title">Gallery</h1>
 </header>
 <?php
-include('./includes/config.inc.php');
-$pics = array();
+/* include('./includes/config.inc.php');
 $pics = array();
 $picreader = opendir($PICFOLDER);
 while (($file = readdir($picreader)) !== false) {
@@ -13,7 +12,7 @@ while (($file = readdir($picreader)) !== false) {
         }
     }
 }
-closedir($picreader);
+closedir($picreader); */
 $msg = array();
 
 if (isset($_POST['imgsend'])) {
@@ -49,27 +48,37 @@ if (!empty($msg)) {
     echo '</ul>';
 }
 ?>
-<h2>Upload images to the Gallery</h2>
-<form action="?page=gallery" method="post" enctype="multipart/form-data">
-    <label>Select Images: <input type="file" name="images[]" multiple required></label>
-    <br>
-    <input type="submit" name="imgsend" value="Upload">
-</form>
+<article class="post">
+    <header>
+        <h2>Upload images to the Gallery</h2>
+    </header>
+    <div>
+        <form action="?page=gallery" method="post" enctype="multipart/form-data">
+            <label>Select Images: <input type="file" name="images[]" multiple required></label>
+            <br>
+            <input type="submit" name="imgsend" value="Upload">
+        </form>
+    </div>
+</article>
 
-<div>
-    <h2>Uploaded Pictures</h2>
-    <?php
-    arsort($pics);
+<article class="post">
+    <header>
+        <h2>Uploaded Pictures</h2>
+    </header>
+    <div>
+        <?php
+        arsort($pics);
 
-    foreach ($pics as $file => $imgdate) { ?>
-        <div class="responsive">
-            <div class="gallery">
-                <a href="<?php echo $PICFOLDER . $file ?>">
-                    <img src="<?php echo $PICFOLDER . $file ?>" height="600">
-                </a>
-                <div class="pic-info">File name: <?php echo $file ?> - Date: <?php echo date($DATEFORMAT, $imgdate) ?></div>
+        foreach ($pics as $file => $imgdate) { ?>
+            <div class="responsive">
+                <div class="gallery">
+                    <a href="<?php echo $PICFOLDER . $file ?>">
+                        <img src="<?php echo $PICFOLDER . $file ?>" height="600">
+                    </a>
+                    <div class="pic-info">File name: <?php echo $file ?> - Date: <?php echo date($DATEFORMAT, $imgdate) ?></div>
+                </div>
             </div>
-        </div>
-    <?php } ?>
-    <div class="clearfix"></div>
-</div>
+        <?php } ?>
+        <div class="clearfix"></div>
+    </div>
+</article>

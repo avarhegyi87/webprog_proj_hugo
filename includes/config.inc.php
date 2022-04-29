@@ -32,7 +32,7 @@
         'gallery'=>array('file'=>'gallery', 'text'=>'Gallery')
 	);
 
-	$error_page = array('file'=>'404','text'=>'A keresett oldal nem található');
+	$error_page = array('file'=>'404','text'=>'Page Not Found');
 
 	$search = null;
 ?>

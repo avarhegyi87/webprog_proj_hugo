@@ -9,17 +9,21 @@
                 <input type="text" name="lname" placeholder="Enter your last name" id="lastName" />
                 <br><br>
                 <p><b>Select your gender <span class="asteriks">*</span></b></p>
-                <input type="radio" id="male" name="gender" value="male"> Male
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
                 <br>
-                <input type="radio" id="female" name="gender" value="female"> Female
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
                 <br>
-                <input type="radio" id="other" name="gender" value="other"> Other / Rather not disclose
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other / Rather not disclose</label>
                 <br><br>
             </div>
             <div class="col-md-12 col-lg-6">
                 <p><b>Enter your email address <span class="asteriks">*</span></b></p>
                 <input type="email" name="email" placeholder="Enter your email" id="email" />
-                <input type="checkbox" id="newsletter" name="newsletter" />Send me monthly newsletter
+                <input type="checkbox" id="newsletter" name="newsletter" />
+                <label for="newsletter">Send me monthly newsletter</label>
                 <br><br>
                 <span><b>What is your question? <span class="asteriks">*</span></b></span>
                 <br>

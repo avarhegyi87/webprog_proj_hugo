@@ -232,6 +232,13 @@ div.pic-info {
     clear: both;
 }
 
+#pic-instructions {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
 footer {
     font-size: small;
     border-style: solid;

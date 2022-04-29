@@ -42,6 +42,15 @@ if (!empty($msg)) {
         <h2>Upload images to the Gallery</h2>
     </header>
     <div>
+        <p>Max allowed resolution: 1024*1024</p>
+        <p>Allowed formats:</p>
+        <ul>
+            <?php foreach ($FORMATS as $picformat) {
+                echo '<li>' . $picformat . '</li>';
+            }
+            ?>
+        </ul>
+
         <form action="?page=gallery" method="post" enctype="multipart/form-data">
             <label>Select Images: <input type="file" name="images[]" multiple required></label>
             <br>
@@ -68,6 +77,10 @@ if (!empty($msg)) {
                 </div>
             </div>
         <?php } ?>
-        <div class="clearfix"></div>
+        <div class="clearfix">
+        </div>
+        <div id="pic-instructions">
+            <p>You can upload images on top of the page.</p>
+        </div>
     </div>
 </article>

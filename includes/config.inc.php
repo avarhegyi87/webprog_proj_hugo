@@ -16,7 +16,7 @@
     );
 
     $PICFOLDER = './gallery/';
-	$FORMATS = array('jpg', 'png');
+	$FORMATS = array('jpg', 'png', 'svg');
 	$ALLOWED_PICTYPES = array('image/jpeg', 'image/png', 'image/svg');
 	$DATEFORMAT = "d/m/Y. H:i";
 	$MAXPICSIZE = 1024*1024;

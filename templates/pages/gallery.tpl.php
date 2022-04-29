@@ -2,17 +2,6 @@
     <h1 class="entry-title">Gallery</h1>
 </header>
 <?php
-/* include('./includes/config.inc.php');
-$pics = array();
-$picreader = opendir($PICFOLDER);
-while (($file = readdir($picreader)) !== false) {
-    if (is_file($PICFOLDER . $file)) {
-        if (in_array(pathinfo($file, PATHINFO_EXTENSION), $FORMATS)) {
-            $pics[$file] = filemtime($PICFOLDER . $file);
-        }
-    }
-}
-closedir($picreader); */
 $msg = array();
 
 if (isset($_POST['imgsend'])) {

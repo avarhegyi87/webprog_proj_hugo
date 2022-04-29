@@ -6,6 +6,35 @@ if (
 ?>
     <div class="col-md-6 mx-auto">
         <div id="msg-display">
+            <?php
+            $re = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
+            $formerr = '';
+            if (strlen($_POST['fname']) == 0) {
+                $formerr += 'ERROR: Missing first name.\r\n';
+            }
+            if (strlen($_POST['lname']) == 0) {
+                $formerr += 'ERROR: Missing last name.\r\n';
+            }
+            if (!preg_match($re, $_POST['email'])) {
+                $formerr += 'ERROR: Invalid email address.\r\n';
+            }
+            if (strlen($_POST['question']) == 0) {
+                $formerr += 'ERROR: Missing message.\r\n';
+            }
+
+            if (!$formerr == '') {
+                echo '<div class="error-note">';
+                echo '<p class="error-note">';
+                echo $formerr;
+                echo '<br>';
+                echo 'The received results';
+                echo "<pre>";
+                var_dump($_POST);
+                echo "</pre>";
+                echo '</p>';
+                echo '</div>';
+            }
+            ?>
             <table>
                 <tbody>
                     <tr>
@@ -51,9 +80,11 @@ if (
     </div>
 <?php
 } else { ?>
-    <p id="error-note">
-        There is no message to display.
-        <br>
-        You can send us a message <a href="?page=contactform">HERE</a>.
-    </p>
+    <div class="error-note">
+        <p>
+            There is no message to display.
+            <br>
+            You can send us a message <a href="?page=contactform">HERE</a>.
+        </p>
+    </div>
 <?php } ?>

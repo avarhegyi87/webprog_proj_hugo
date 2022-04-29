@@ -168,9 +168,11 @@ form button[type=submit]:hover {
     color: crimson;
 }
 
-#error-note {
+.error-note,
+#msg-display .error-note {
     text-align: center;
     font-style: italic;
+    color: crimson;
     font-family: 'Courier New', Courier, monospace;
 }
 

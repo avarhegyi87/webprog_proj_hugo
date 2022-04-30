@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="page">
+    <div id="page" class="site">
         <header>
             <h1 id="page-title"><?= $wnd_title['title'] ?></h1>
             <?php if (isset($wnd_title['motto'])) { ?><h2 id="page-subtitle"><?= $wnd_title['motto'] ?></h2><?php } ?>

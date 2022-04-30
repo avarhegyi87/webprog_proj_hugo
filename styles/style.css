@@ -2,11 +2,18 @@ body {
     background-color: #1d5692 !important;
 }
 
-#page {
+.site {
+    margin: 0 auto;
+    padding: 27px;
     background-color: white;
-    margin: 54px auto;
-    padding: 54px 108px;
-    max-width: 1200px;
+}
+
+@media screen and (min-width: 1200px) {
+    .site {
+        margin: 54px auto;
+        padding: 54px 108px;
+        max-width: 1153px;
+    }
 }
 
 #page-title {
@@ -114,6 +121,11 @@ td {
 tr:hover {
     background-color: lightblue;
     transition: .4s;
+}
+
+div.entry-contents>table.awards{
+    overflow-x: auto;
+    width: 100vh;
 }
 
 #form-title {

@@ -10,16 +10,16 @@ if (
             $re = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
             $formerr = '';
             if (strlen($_POST['fname']) == 0) {
-                $formerr += 'ERROR: Missing first name.\r\n';
+                $formerr = $formerr . 'ERROR: Missing first name. ';
             }
             if (strlen($_POST['lname']) == 0) {
-                $formerr += 'ERROR: Missing last name.\r\n';
+                $formerr = $formerr . 'ERROR: Missing last name. ';
             }
             if (!preg_match($re, $_POST['email'])) {
-                $formerr += 'ERROR: Invalid email address.\r\n';
+                $formerr = $formerr . 'ERROR: Invalid email address. ';
             }
             if (strlen($_POST['question']) == 0) {
-                $formerr += 'ERROR: Missing message.\r\n';
+                $formerr = $formerr . 'ERROR: Missing message. ';
             }
 
             if (!$formerr == '') {

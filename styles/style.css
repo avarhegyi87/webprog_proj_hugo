@@ -258,6 +258,8 @@ div.pic-info {
     text-align: center;
 }
 
+pre {text-align: center;}
+
 footer {
     font-size: small;
     border-style: solid;

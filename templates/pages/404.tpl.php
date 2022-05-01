@@ -1,1 +1,1 @@
-<h2><?= $search['text'] ?></h2>
+<h2 class="error-note"><?= $search['text'] ?></h2>

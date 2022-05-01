@@ -116,6 +116,7 @@ article {
 th,
 td {
     border-bottom: 1px solid #ddd;
+    padding: 0 15px;
 }
 
 tr:hover {
@@ -123,9 +124,15 @@ tr:hover {
     transition: .4s;
 }
 
-div.entry-contents>table.awards{
-    overflow-x: auto;
-    width: 100vh;
+@media (max-width: 600px) {
+    table {
+      display: block;
+      max-width: -moz-fit-content;
+      max-width: fit-content;
+      margin: 0 auto;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
 }
 
 #form-title {

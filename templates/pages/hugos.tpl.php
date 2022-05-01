@@ -2,7 +2,7 @@
     <header>
         <h1 class="entry-title">Hugo Awards for Best Novel by Year</h1>
     </header>
-    <div class="entry-content">
+    <div class="entry-content table-container">
         <table class="awards">
             <tbody>
                 <tr>
@@ -25,7 +25,7 @@
                 </tr>
                 <tr>
                     <td>Roger Zelazny</td>
-                    <td><i>...And Call Me Conrad</i> (also known as <i>This Immortal</i></td>
+                    <td><i>...And Call Me Conrad</i> (also known as <i>This Immortal</i>)</td>
                     <td>The Magazine of Fantasy & Science Fiction</td>
                 </tr>
                 <tr>
@@ -118,7 +118,7 @@
     <header>
         <h1 class="entry-title">Candidates for Hugo Awards for Best Novel in 2022</h1>
     </header>
-    <div class="entry-content">
+    <div class="entry-content table-content">
         <table class="awards">
             <tbody>
                 <tr>
